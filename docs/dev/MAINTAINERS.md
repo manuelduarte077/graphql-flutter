@@ -25,6 +25,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 - We follow [Effective Dart: Style Guidelines][dart-style-guide].
 
 ### If You Don’t Know The Right Thing, Do The Simplest Thing
+
 Sometimes the right way is unclear, so it’s best not to spend time on it. It’s far easier to rewrite simple code than complex code, too.
 
 ### Use of `FIXME`
@@ -42,9 +43,9 @@ Don’t overdesign: complexity is a killer. If you need a fancy data structure, 
 perhaps consider your fancy structure, but don’t implement a generic thing. Use `/* FIXME: ...*/` to salve your conscience.
 
 ### Keep Your Patches Reviewable
+
 Try to make a single change at a time. It’s tempting to do “drive-by” fixes as you see other things, and a minimal amount is unavoidable,
 but you can end up shaving infinite yaks. This is a good time to drop a `/* FIXME: ...*/` comment and move on.
-
 
 ## Commit Style
 
@@ -95,7 +96,6 @@ The version in our package.json gets copied to the one we publish, and users nee
 - **graphql**: Changes related to the graphql client
 - **graphql_flutter**: Changes related to the graphql_flutter package
 
-
 ### Subject
 
 The subject contains a succinct description of the change:
@@ -142,16 +142,13 @@ To prepare the release the following steps are required:
 - Generate the changelog related to the package:
   - `export GITHUB_TOKEN="your_token"`
   - `make {changelog_client|changelog_flutter|changelog}`, where
-      - `changelog_client`: generate the changelog for graphql;
-      - `changelog_flutter`: generate the changelog for graphql_flutter;
-      - `changelog`: generate both changelos.
+    - `changelog_client`: generate the changelog for graphql;
+    - `changelog_flutter`: generate the changelog for graphql_flutter;
+    - `changelog`: generate both changelos.
 - Make the Github release: To release a single package we need to create a release with the following tag `{package_name}-v{version_number}`, and
-if we make a release with the tag `v{version_number}` this will release all the packages (useful for a major release of the package).
+  if we make a release with the tag `v{version_number}` this will release all the packages (useful for a major release of the package).
 
-
-
->Programs must be written for people to read, and only incidentally for machines to execute.
->                                                                            - Someone
+> Programs must be written for people to read, and only incidentally for machines to execute. - Someone
 
 Cheers!
 
