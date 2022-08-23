@@ -6,25 +6,90 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  /* Color Palette */
+  --colors-darker-grey: #27364a;
+  --colors-dark-grey: #1d2939;
+  --colors-light-grey: #314155;
+  --colors-green: #66fbd1;
+  --colors-blue: #2a48df;
+  --colors-dark-blue: #1d39c4;
+  --colors-white: #ffffff;
+  --colors-off-white: #fbfcff;
+  --colors-off-white-dark: #f3f6ff;
+
+  /* Custom Variables */
+  --hero-image-background-color: var(--colors-white);
+
+  /* Infirma Variables */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: var(--colors-off-white);
+  --ifm-button-font-weight: 700;
+  --ifm-button-padding-horizontal: 1.15rem;
+  --ifm-button-padding-vertical: 0.4rem;
+  --ifm-card-background-color: var(--colors-off-white);
+  --ifm-code-font-size: 95%;
+  --ifm-color-primary-dark: #1f3ccf;
+  --ifm-color-primary-darker: var(--colors-dark-blue);
+  --ifm-color-primary-darkest: #182fa1;
+  --ifm-color-primary-light: #415ce2;
+  --ifm-color-primary-lighter: #4d66e4;
+  --ifm-color-primary-lightest: #6f83e9;
+  --ifm-color-primary: var(--colors-blue);
+  --ifm-footer-background-color: var(--colors-off-white);
+  --ifm-link-color: var(--colors-blue);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Custom Variables */
+  --hero-image-background-color: var(--colors-darker-grey);
+
+  /* Infirma Variables */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: var(--colors-dark-grey) !important;
+  --ifm-card-background-color: var(--colors-light-grey);
+  --ifm-color-primary-dark: #44fac7;
+  --ifm-color-primary-darker: #32fac1;
+  --ifm-color-primary-darkest: #06f1af;
+  --ifm-color-primary-light: #88fcdb;
+  --ifm-color-primary-lighter: #9afce1;
+  --ifm-color-primary-lightest: #cdfef0;
+  --ifm-color-primary: #66fbd1;
+  --ifm-color-secondary-dark: var(--colors-dark-grey);
+  --ifm-color-secondary: var(--colors-light-grey);
+  --ifm-footer-background-color: var(--colors-light-grey);
+  --ifm-link-color: var(--colors-green);
+  --ifm-navbar-background-color: var(--colors-dark-grey);
+}
+
+
+html[data-theme='dark'] .button {
+  color: var(--colors-white);
+}
+
+html[data-theme='dark'] .button--primary {
+  --ifm-button-background-color: var(--colors-blue);
+  --ifm-button-border-color: var(--colors-blue);
+}
+
+html[data-theme='dark'] .button--primary:hover {
+  --ifm-button-background-color: var(--colors-dark-blue);
+  --ifm-button-border-color: var(--colors-dark-blue);
+}
+
+.button--lg {
+  --ifm-button-size-multiplier: 1.5;
+}
+
+
+html .footer {
+  margin-top: 4rem;
+}
+
+html footer .footer__copyright {
+  font-size: 0.75rem;
+}
+
+.navbar-github-icon:hover {
+  opacity: 0.6;
 }

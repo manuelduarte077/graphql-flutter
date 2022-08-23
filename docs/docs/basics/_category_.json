@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "position": 2,
+  "link": {
+    "title": "Basics 📚",
+    "type": "generated-index",
+    "description": "Aprenda el cliente GraphQL más importante para los conceptos de Flutter en solo unos minutos."
+  }
+}
